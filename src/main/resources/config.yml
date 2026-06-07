@@ -1,0 +1,53 @@
+# CommandGuard 설정
+# - /bukkit:pl 같은 네임스페이스 명령어도 자동 정규화해서 검사합니다.
+# - 대소문자 무시.
+# - commandguard.bypass 권한이 있으면 차단하지 않습니다.
+
+blocked-message: '&c이 명령어는 사용할 수 없습니다.'
+hide-from-tab-complete: true
+block-console-commands: false
+
+# /pl, /bukkit:pl, /minecraft:msg 처럼 namespace:command 형태도 같은 명령으로 처리됩니다.
+blocked-commands:
+  # 서버/플러그인 정보 노출
+  - pl
+  - plugins
+  - ver
+  - version
+  - about
+  - icanhasbukkit
+  - help
+  - '?'
+  - bukkit:pl
+  - bukkit:plugins
+  - bukkit:ver
+  - bukkit:version
+  - bukkit:about
+  - bukkit:help
+  - bukkit:?
+  - minecraft:help
+
+  # 귓속말/개인 메시지
+  - w
+  - whisper
+  - msg
+  - message
+  - tell
+  - t
+  - pm
+  - privatemessage
+  - r
+  - reply
+  - er
+  - ereply
+  - emsg
+  - etell
+  - ewhisper
+  - essentials:msg
+  - essentials:tell
+  - essentials:w
+  - essentials:whisper
+  - essentials:r
+  - minecraft:msg
+  - minecraft:tell
+  - minecraft:w

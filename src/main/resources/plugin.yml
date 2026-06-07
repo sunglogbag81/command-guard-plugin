@@ -1,0 +1,19 @@
+name: CommandGuard
+version: 1.0.0
+main: kr.openclaw.commandguard.CommandGuardPlugin
+api-version: '1.13'
+author: OpenClaw
+load: STARTUP
+permissions:
+  commandguard.bypass:
+    description: Allows bypassing blocked commands.
+    default: op
+  commandguard.reload:
+    description: Allows reloading CommandGuard config.
+    default: op
+commands:
+  commandguard:
+    description: Reload CommandGuard config.
+    usage: /commandguard reload
+    permission: commandguard.reload
+    aliases: [cg]
